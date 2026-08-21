@@ -6,6 +6,7 @@ from utils import save_pkl, load_pkl
 from tensorflow.contrib.layers.python.layers import initializers
 from functools import reduce
 
+# Dataset if extracted from year of 2021
 
 class feature_q_model():
     def __init__(self, input_len, feature_len, output_len, learning_rate = 0.0001):
