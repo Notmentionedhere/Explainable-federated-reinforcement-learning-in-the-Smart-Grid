@@ -6,6 +6,8 @@ from utils import save_pkl, load_pkl
 from tensorflow.contrib.layers.python.layers import initializers
 from functools import reduce
 
+# Dataset if extracted from year of 2021
+
 class FRLDQN(object):
     """docstring for FRLNetwork"""
     def __init__(self, sess, args):
