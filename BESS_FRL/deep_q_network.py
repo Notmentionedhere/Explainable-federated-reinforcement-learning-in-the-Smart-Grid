@@ -63,6 +63,19 @@ class FRLDQN(object):
             out = activation_fn(out)
         return out, w, b
 
+# MLP new add
+    def mlp(self, x, layer_dims, activation_fn=tf.nn.relu, name='mlp'):
+    with tf.variable_scope(name):
+        out = x
+        weights = []
+        biases = []
+
+        for i, dim in enumerate(layer_dims):
+            out, w, b = self.linear(out, dim, activation_fn=activation_fn, name='layer_%d' % i)
+            weights.append(w)
+            biases.append(b)
+
+    return out, weights, biases
 
     def build_dqn(self):
         #init = tf.contrib.layers.xavier_initializer()
