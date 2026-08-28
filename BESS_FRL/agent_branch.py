@@ -115,6 +115,7 @@ class Agent(object):
             # otherwise choose action with highest Q-value
             # state_alpha, state_beta = self.env.getState() # [1,4]
             # qvalue = self.net.predict(state_alpha, state_beta, predict_net)
+            #get all the state
             states_all = self.env.getState()  # [2,1,4]
             qvalue = self.net.predict(states_all, predict_net)
 
